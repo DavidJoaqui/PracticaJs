@@ -1,0 +1,48 @@
+@font-face{
+	font-family:'Antonio';
+	src:url('../fonts/Antonio-Regular.ttf');
+}
+@font-face{
+	font-family:'Aller';
+	src:url('../fonts/Aller_rg.ttf');
+}
+body{
+	margin: 1px;
+}
+#fontAntonio{
+	font-family:'Antonio-Regular';
+	font-size: 18px;
+}
+#autores{
+	width: 47%;
+	float: right;
+	vertical-align: center;
+
+}
+#btnMostrar{
+background-color:#48990f;
+color: #ffffff;
+font-family:'Aller';
+}
+#btnOcultar{
+background-color:red;
+color: #ffffff;
+font-family:'Aller';
+}
+#botones{
+	width: 100%;
+	padding-left: 100px;
+}
+#jumbotron{
+	padding: 10px 10px 10px 10px;
+	margin-left: 85px;
+	margin-right: 85px;
+	
+
+}
+#jumbotroninfo{
+	padding: 10px 10px 10px 10px;
+	margin-left: 85px;
+	margin-right: 85px;
+	font-size: 18px;
+}

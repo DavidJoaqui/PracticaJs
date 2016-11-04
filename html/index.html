@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../js/jquery-3.1.1.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ 
+	<title>Practica Javascript</title>
+<div id="botones">
+<button type="button" class="btn btn-default btn-md" id="btnMostrar">
+  Mostrar
+</button>
+<button type="button" class="btn btn-default btn-md" id="btnOcultar">
+  Ocultar
+</button>
+</div>
+</head>
+
+<body>
+<script type="text/javascript">
+var txtautores = [
+		{
+			nombre:"Juan Valdivia",
+			profesion:"Guitarrista",
+			pais:"España",
+			descripcion:"La técnica de Juan Valdivia es fácil de distinguir entre el resto de grupos españoles, en los primeros álbumes (El mar no cesa y Senderos de Traición) es destacable el frecuente uso de arpegios poco distorsionados, únicamente se denota el efecto overdrive en los estribillos y solos de guitarra, el efecto omnipresente en el trabajo de Juan Valdivia es el Chorus así como el Delay; para los siguientes álbumes, contando con Alan Boguslavsky como segundo guitarra, el sonido se volvió más pesado, recurriendo a la distorsión, aunque siguieron presentes los arpegios, más sólidos y sobre una fuerte base rítmica.",
+			imagen:"juan-valdivia.jpg"
+		},{
+			nombre:"Oscar Wilde",
+			profesion:"Escritor",
+			pais:"Reino Unido",
+			descripcion: "Wilde es considerado uno de los dramaturgos más destacados del Londres victoriano tardío; además, fue una celebridad de la época debido a su gran y aguzado ingenio. Hoy en día, es recordado por sus epigramas, sus obras de teatro y la tragedia de su encarcelamiento, seguida de su temprana muerte.",
+			imagen:"oscar-wilde.jpg"
+
+		},{
+			nombre:"Dennis Ritchie",
+			profesion:"Cientítico de la Computación",
+			pais:"Estados Unidos",
+			descripcion: "No existe duda alguna de que C es el lenguaje de programación más popular y famoso de todos los tiempos. C es un lenguaje de programación imperativa para implementación de sistemas. Aunque al ser tan popular también se ha desarrollado infinidad de aplicaciones con él. C presenta facilidades para la programación estructurada, permite ámbito léxico variable y recursión, además esta fuertemente orientado a tipos con un sistema estático que impide operaciones no deseadas.",
+			imagen:"dennis-ritchie.jpg"
+		}
+
+
+];
+for (var i = 0; i < txtautores.length; i++) {
+	console.log(txtautores[i]);
+}
+
+			function eleccionautores(){
+		var ruta=document.getElementById("autores").value;
+		document.getElementById("imagen").src=ruta;
+		
+			if (ruta=="../img/dennis-ritchie.jpg") {
+
+			document.getElementById("jumbotroninfo").innerHTML=(txtautores[2].descripcion);
+			
+			}
+			else if(ruta=="../img/oscar-wilde.jpg"){
+				document.getElementById("jumbotroninfo").innerHTML=txtautores[1].descripcion;
+				
+			}
+			else if(ruta=="../img/juan-valdivia.jpg"){
+				document.getElementById("jumbotroninfo").innerHTML=txtautores[0].descripcion;
+			}
+			
+		
+		
+	}
+</script>
+
+<div class="container">
+<div  class="col-md-12 col-sm-8 col-xs-8" align="center">
+<span><b style="font-size:20px;padding-left:110px">Autor:</b></span><br>
+<select id="autores" onchange="eleccionautores()">
+<option value="../img/juan-valdivia.jpg">Juan Valdivia</option>
+<option value="../img/oscar-wilde.jpg">Oscar Wilde</option>
+<option value="../img/dennis-ritchie.jpg">Dennis Ritchie</option>
+
+</select>	
+</div>
+</div>
+
+
+
+<div class="jumbotron" id="jumbotron">
+    <div class="container">	
+        <div class="col-md-12 col-md-12 col-xs-12">
+  <img src="../img/juan-valdivia.jpg" id="imagen" width="200" height="200">
+
+       </div>
+    </div>
+</div>
+
+
+
+<div class="jumbotron" id="jumbotroninfo">
+  <div class="container" id="contenido">
+   			  <p id="fontAntonio">
+   			  	<b> 
+                "La técnica de Juan Valdivia es fácil de distinguir entre el resto de grupos españoles, en los primeros álbumes (El mar no cesa y Senderos de Traición) es destacable el frecuente uso de arpegios poco distorsionados, únicamente se denota el efecto overdrive en los estribillos y solos de guitarra, el efecto omnipresente en el trabajo de Juan Valdivia es el Chorus así como el Delay; para los siguientes álbumes, contando con Alan Boguslavsky como segundo guitarra, el sonido se volvió más pesado, recurriendo a la distorsión, aunque siguieron presentes los arpegios, más sólidos y sobre una fuerte base rítmica."
+                </b>
+              </p>
+</div>
+
+
+</body>
+</html>
