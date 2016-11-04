@@ -49,27 +49,36 @@ for (var i = 0; i < txtautores.length; i++) {
 	console.log(txtautores[i]);
 }
 
-			function eleccionautores(){
+		function eleccionautores(){
+
+
 		var ruta=document.getElementById("autores").value;
 		document.getElementById("imagen").src=ruta;
 		
 			if (ruta=="../img/dennis-ritchie.jpg") {
 
-			document.getElementById("jumbotroninfo").innerHTML=txtautores[2].descripcion;
-			document.getElementById("datos_autor").innerHTML="<b>"+txtautores[2].nombre+"\n<br>"+txtautores[2].profesion+"\n<br>"+txtautores[2].pais;
+					document.getElementById("jumbotroninfo").innerHTML=txtautores[2].descripcion;
+					document.getElementById("nombre_apellido").innerHTML="<b>"+txtautores[2].nombre;
+					document.getElementById("profesion").innerHTML="<b>"+txtautores[2].profesion;
+					document.getElementById("pais_origen").innerHTML=txtautores[2].pais;
 			}
 			else if(ruta=="../img/oscar-wilde.jpg"){
-				document.getElementById("jumbotroninfo").innerHTML=txtautores[1].descripcion;
-				document.getElementById("datos_autor").innerHTML="<b>"+txtautores[1].nombre+"\n<br>"+txtautores[1].profesion+"\n<br>"+txtautores[1].pais;
+					document.getElementById("jumbotroninfo").innerHTML=txtautores[1].descripcion;
+					document.getElementById("nombre_apellido").innerHTML="<b>"+txtautores[1].nombre;
+					document.getElementById("profesion").innerHTML="<b>"+txtautores[1].profesion;
+					document.getElementById("pais_origen").innerHTML=txtautores[1].pais;
 			}
 			else if(ruta=="../img/juan-valdivia.jpg"){
-				document.getElementById("jumbotroninfo").innerHTML=txtautores[0].descripcion;
-				document.getElementById("datos_autor").innerHTML="<b>"+txtautores[0].nombre+"\n<br>"+txtautores[0].profesion+"\n<br>"+txtautores[0].pais;
+					document.getElementById("jumbotroninfo").innerHTML=txtautores[0].descripcion;
+					document.getElementById("nombre_apellido").innerHTML="<b>"+txtautores[0].nombre;
+					document.getElementById("profesion").innerHTML="<b>"+txtautores[0].profesion;
+					document.getElementById("pais_origen").innerHTML=txtautores[0].pais;
 			}
 			
 		
 		
 	}
+
 </script>
 
 <div class="container">
@@ -89,14 +98,18 @@ for (var i = 0; i < txtautores.length; i++) {
 <div class="jumbotron" id="jumbotron">
     <div class="container">	
         <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12" style="float:left">
-  <img src="../img/juan-valdivia.jpg" id="imagen">
-   <div id="datos_autor" style="float:left;padding-left:40px;padding-top:30px">
-      
-       Juan Valdivia<br>	
-		Guitarrista<br>
-		España
-		
-   </div>
+
+ 		 	<img src="../img/juan-valdivia.jpg" id="imagen">
+
+  			 <div id="datos_autor" style="float:left;padding-left:40px;padding-top:30px">
+
+      			<p style="font-size:30px" id="nombre_apellido">Juan Valdivia<br></p>
+
+				<small id="profesion"><b>Guitarrista</b></small><br>
+
+				<small id="pais_origen">España</small>	
+	 
+   			</div>
        </div>
     
    </div>
@@ -106,13 +119,13 @@ for (var i = 0; i < txtautores.length; i++) {
 
 
 <div class="jumbotron" id="jumbotroninfo">
-  <div class="container" id="contenido">
-   			  <p>
+  		<div class="container" id="contenido">
+   			  <p id="descripcion">
    			  	
                "La técnica de Juan Valdivia es fácil de distinguir entre el resto de grupos españoles, en los primeros álbumes (El mar no cesa y Senderos de Traición) es destacable el frecuente uso de arpegios poco distorsionados, únicamente se denota el efecto overdrive en los estribillos y solos de guitarra, el efecto omnipresente en el trabajo de Juan Valdivia es el Chorus así como el Delay; para los siguientes álbumes, contando con Alan Boguslavsky como segundo guitarra, el sonido se volvió más pesado, recurriendo a la distorsión, aunque siguieron presentes los arpegios, más sólidos y sobre una fuerte base rítmica."
                 
               </p>
-  </div>
+ 		</div>
 </div>
 
 </body>
