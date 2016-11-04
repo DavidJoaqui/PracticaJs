@@ -9,9 +9,13 @@
 body{
 	margin: 1px;
 }
-#fontAntonio{
+#imagen{
+	float: left;
+}
+#datos_autor{
 	font-family:'Antonio-Regular';
-	font-size: 18px;
+	font-size: 16px;
+	float: right;
 }
 #autores{
 	width: 47%;
@@ -44,5 +48,5 @@ font-family:'Aller';
 	padding: 10px 10px 10px 10px;
 	margin-left: 85px;
 	margin-right: 85px;
-	font-size: 18px;
+	font-size: 16px;
 }
